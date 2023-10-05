@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">hello</h1>
+    <img src="https://tse1.mm.bing.net/th?id=OIP.kDNHkvsOHwMMwnwTqfSodQHaCw&pid=Api&P=0&h=220" alt="photo" id="image"><br>
+    <button onclick="toggleImg()" style="cursor: pointer;">Toggle Image</button>
+
+    <script>
+        const text = document.getElementById('text');
+        const image = document.getElementById('image')
+
+        function toggleImg() {
+            if (image.style.opacity == 0) {
+                text.textContent = "your image is visibale"
+                image.style.opacity = 100;
+            }else{
+                text.textContent = "your image is hidden"
+                image.style.opacity = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>

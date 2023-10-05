@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  </head>
+  <body>
+    <div id="page"></div>
+
+    <script>
+      const options = ["JavaScript", "Java", "Python","C++"]
+      const page = document.getElementById("page");
+      const heading = document.createElement("h2")
+      heading.innerHTML = "Which is favorite Programming Language : "
+      const select = document.createElement("select")
+      options.map(function (data) {
+        const option = document.createElement("option")
+        option.innerHTML = data;
+        select.appendChild(option)
+        select.style.padding = "12px"
+      })
+      heading.append(select)
+      page.append(heading);
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theam change</title>
+    <style>
+       body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+       }
+    </style>
+</head>
+<body>
+    <h1 id="text">This is Light Mode</h1>
+    <button onclick="toggle()">Toggle Theme</button>
+
+    <script>
+        const text = document.getElementById('text');
+        function toggle() {
+            const color = document.body.style.backgroundColor;
+            if (color === 'white') {
+                document.body.style.backgroundColor = 'black';
+                text.style.color = 'white';
+                text.textContent = 'This is dark Mode'
+            } else {
+                document.body.style.backgroundColor = 'white';
+                text.style.color = 'black';
+                text.textContent = 'This is light Mode' 
+            }
+        }
+    </script>
+</body>
+</html>

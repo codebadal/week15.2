@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" placeholder="Search for items" id="input">
+    <h2>Results:</h2>
+    <ul id="list-item">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Tailwind CSS</li>
+        <li>Git Hub</li>
+        <li>JavaScript</li>
+    </ul>
+
+
+    <script>
+        const input = document.getElementById("input");
+        const list = document.getElementsByTagName("li");
+
+        input.addEventListener("input",function () {
+            const inputCase = input.value.toLowerCase();
+            
+            for (let i = 0; i < list.length; i++) {
+                const listCase = list[i].innerText.toLowerCase();
+                
+                if (listCase.includes(inputCase)) {
+                    list[i].style.display = "block"
+                }else{
+                    list[i].style.display = "none"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
